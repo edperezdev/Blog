@@ -92,7 +92,7 @@ header ul a:hover {
 /* Banner */
 
 .banner {
-  background-image: url(/images/banner-mario.jpg);
+  background-image: url(images/banner-mario.jpg);
   background-position: center;
   background-size: cover;
   padding: 30px;
