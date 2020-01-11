@@ -86,14 +86,14 @@ header ul a {
 header ul a:hover {
   color: rgb(76, 76, 206);
   font-weight: bolder;
-  border-bottom: 0.2px dashed black;
+  border-bottom: 0.5px dashed black;
 }
 
 /* Banner */
 
 .banner {
   background-image: url("./../images/banner-mario.jpg");
-  background-position: center;
+  background-position: center center;
   background-size: cover;
   padding: 30px;
   width: 95.6%;
@@ -133,6 +133,8 @@ header ul a:hover {
   background-color: rgb(221, 227, 230);
   border: none;
   margin-left: 1%;
+  outline:none;
+  
 }
 
 /* Active Article */
@@ -182,6 +184,8 @@ header ul a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+
+
 }
 
 .inactive-articles figure img {
