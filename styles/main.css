@@ -8,23 +8,23 @@ body {
 }
 
 h1 {
-  font: bold 48px Helvetica;
-  color: white;
+  font: bold 3rem Helvetica;
+  color: rgb(255, 255, 255);
 }
 
 h2 {
-  font: bold 25px Helvetica;
+  font: bold 1.5rem Helvetica;
   color: rgb(31, 31, 128);
 }
 
 h3 {
-  font: bold 19px Helvetica;
+  font: bold 1.2rem Helvetica;
   color: rgba(31, 109, 128, 0.76);
   padding-bottom: 18px;
 }
 
 h4 {
-  font: bold 12px Helvetica;
+  font: bold 0.75rem Helvetica;
   color: rgb(31, 31, 128);
 }
 section {
@@ -102,13 +102,27 @@ header ul a:hover {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.banner::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background: rgba(93, 175, 190, 0.445);
+
 }
 
 .banner p {
-  color: rgba(242, 231, 231, 0.7);
+  color: rgb(242, 231, 231);
   margin-left: 25%;
   margin-right: 25%;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 /* Search */
@@ -133,8 +147,7 @@ header ul a:hover {
   background-color: rgb(221, 227, 230);
   border: none;
   margin-left: 1%;
-  outline:none;
-  
+  outline: none;
 }
 
 /* Active Article */
@@ -168,7 +181,7 @@ header ul a:hover {
 }
 
 .date-read {
-  font: oblique 12px Helvetica;
+  font: oblique 0.75rem Helvetica;
   color: rgba(185, 185, 218, 0.911);
   margin-top: 10px;
   margin-bottom: 0px;
@@ -184,8 +197,6 @@ header ul a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-
-
 }
 
 .inactive-articles figure img {
@@ -232,7 +243,7 @@ header ul a:hover {
 }
 
 .little-article > p {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .nav-post {
@@ -243,7 +254,7 @@ header ul a:hover {
 
 .nav-post a {
   font-family: "Courier New", Courier, monospace;
-  font-size: 20px;
+  font-size: 1.25rem;
   color: black;
   transition: all 0.2s ease-in-out;
 }
@@ -282,7 +293,7 @@ header ul a:hover {
   width: 20%;
   height: 15%;
   color: white;
-  font-size: 20px;
+  font-size: 0.75rem;
   background-color: rgb(7, 101, 124);
   border-radius: 20px;
   border: none;
@@ -315,7 +326,7 @@ header ul a:hover {
 
 .contact-title {
   font-weight: bolder;
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 
 .contact img {
@@ -330,8 +341,7 @@ header ul a:hover {
   font-family: Arial, Helvetica, sans-serif;
 }
 .derechos {
-    margin-left: 140px;
-    margin-top:90px;
-    color: rgb(231, 213, 213)
+  margin-left: 140px;
+  margin-top: 90px;
+  color: rgb(231, 213, 213);
 }
-
