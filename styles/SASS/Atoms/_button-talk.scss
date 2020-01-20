@@ -1,0 +1,16 @@
+// Botón de la sección talk
+
+.button {
+    width: 20%;
+    height: 15%;
+    color: $primary-white;
+    font-size: 0.75rem;
+    background-color: $fourth-blue;
+    border-radius: 20px;
+    border: none;
+
+    &:hover {
+        box-shadow: 5px 5px 5px black;
+      }
+  }
+  

@@ -1,0 +1,16 @@
+/* Active Article */
+
+.first-article {
+  display: flex;
+  align-content: space-between;
+  figure img {
+    height: 380px;
+  }
+
+  .article-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 30px;
+  }
+}

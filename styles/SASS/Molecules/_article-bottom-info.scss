@@ -1,0 +1,17 @@
+// Autor, fecha
+
+.author-and-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  .date-read {
+    font: $font-size-date-article;
+    color: $third-grey;
+    margin-top: 10px;
+  }
+}
+
+
+
+

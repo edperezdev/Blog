@@ -1,0 +1,43 @@
+/* Footer - Contact */
+
+.f-contact {
+  height: 400px;
+  width: 80%;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  background-color: $third-blue;
+  padding: 70px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+
+  .contact {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+
+    .contact-title {
+      font-weight: bolder;
+      font-size: 1.5rem;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    div {
+      margin-top: 30px;
+      margin-left: 30px;
+      line-height: 25px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  }
+
+  .derechos {
+    margin-left: 140px;
+    margin-top: 90px;
+    color: $third-white;
+  }
+}

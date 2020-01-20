@@ -1,0 +1,33 @@
+/* Banner */
+
+.banner {
+    background-image: url($banner-background);
+    background-position: center center;
+    background-size: cover;
+    padding: 30px;
+    width: 95.6%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        background: $background-opacity-color;
+      }
+  }
+  
+    
+  .banner-subtitle {
+    color: $secondary-white;
+    margin: 0% 25%;
+    font-size: 1.25rem;
+  }
