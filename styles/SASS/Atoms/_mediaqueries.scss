@@ -1,0 +1,61 @@
+// Media Queries
+
+// Tablet
+
+@media (max-width: 1060px) {
+  section {
+    width: 80%;
+  }
+}
+
+// Otro 980
+
+@media (max-width: 930px) {
+  section {
+    width: 90%;
+  }
+}
+
+// Otro 830
+
+@media (max-width: 800px) {
+  .first-article {
+    grid-template-columns: 1fr;
+    grid-auto-flow: dense;
+    border-bottom: 1px solid $secondary-grey;
+
+    figure {
+        order:1;
+      img {
+        height: auto;
+      }
+    }
+
+    .article-content{
+        order:2;
+    }
+  }
+}
+
+// 675
+
+@media (max-width: 675px) {
+  .inactive {
+    .inactive-articles {
+      grid-template-columns: repeat(1, 1fr);
+
+      figure img {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  }
+
+  .little-article {
+    grid-template-columns: 1fr;
+
+    figure img {
+      height: 200px;
+    }
+  }
+}

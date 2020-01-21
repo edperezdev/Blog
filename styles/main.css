@@ -228,15 +228,16 @@ header {
 
 /* Active Article */
 .first-article {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  gap: 25px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 }
 
 .first-article figure img {
   height: 380px;
+  width: 100%;
 }
 
 .first-article .article-content {
@@ -324,15 +325,11 @@ header {
 
 /* All articles */
 .little-article {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  gap: 25px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   margin-top: 30px;
 }
 
@@ -344,15 +341,14 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-left: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .little-article figure img {
-  width: 300px;
-  height: 160px;
+  width: 100%;
+  height: 100%;
 }
 
 .little-article .title-all {
@@ -479,5 +475,57 @@ header {
   margin-left: 140px;
   margin-top: 90px;
   color: #c5b8b8;
+}
+
+@media (max-width: 1060px) {
+  section {
+    width: 80%;
+  }
+}
+
+@media (max-width: 930px) {
+  section {
+    width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .first-article {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-auto-flow: dense;
+    border-bottom: 1px solid rgba(129, 120, 120, 0.699);
+  }
+  .first-article figure {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .first-article figure img {
+    height: auto;
+  }
+  .first-article .article-content {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+@media (max-width: 675px) {
+  .inactive .inactive-articles {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .inactive .inactive-articles figure img {
+    width: 100%;
+    height: 200px;
+  }
+  .little-article {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .little-article figure img {
+    height: 200px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
