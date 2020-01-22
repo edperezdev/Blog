@@ -4,11 +4,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  width: 90%;
+  box-sizing: border-box;
+  width: 100%;
   margin: auto;
 }
 
 .header-nav {
-  display: inline-block;
+  display: block;
   @extend nav;
 }

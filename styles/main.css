@@ -110,12 +110,14 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px;
-  width: 90%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
   margin: auto;
 }
 
 .header-nav {
-  display: inline-block;
+  display: block;
 }
 
 .logo {
@@ -159,10 +161,12 @@ header {
 .banner {
   background-image: url("./../images/banner-mario.jpg");
   background-position: center center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-size: cover;
   padding: 30px;
-  width: 95.6%;
-  height: 180px;
+  width: 100%;
+  height: 220px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,8 +332,8 @@ header {
   display: -ms-grid;
   display: grid;
   gap: 25px;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 40% 1fr;
+      grid-template-columns: 40% 1fr;
   margin-top: 30px;
 }
 
@@ -430,53 +434,53 @@ header {
   background-color: #4f74d8;
   padding: 70px;
   color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: baseline;
-      -ms-flex-pack: baseline;
-          justify-content: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .f-contact .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 1fr 30% 30%;
+      grid-template-columns: 1fr 30% 30%;
+  gap: 20px;
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  justify-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.f-contact .contact .contact-title {
-  font-weight: bolder;
+.f-contact .contact .contact-column {
+  margin-top: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.f-contact .contact .contact-column .contact-title {
+  font-weight: bold;
   font-size: 1.5rem;
 }
 
-.f-contact .contact .contact-title img {
+.f-contact .contact .contact-column .contact-title img {
   width: 20px;
   height: 20px;
 }
 
-.f-contact .contact div {
-  margin-top: 30px;
-  margin-left: 30px;
-  line-height: 25px;
-  font-family: Arial, Helvetica, sans-serif;
+.f-contact .contact .contact-column ul li {
+  line-height: 35px;
+  margin-top: 25px;
 }
 
 .f-contact .derechos {
-  margin-left: 140px;
-  margin-top: 90px;
+  width: 100%;
+  margin-top: 50px;
   color: #c5b8b8;
 }
 
+/*Media Queries*/
 @media (max-width: 1060px) {
   section {
     width: 80%;
@@ -490,6 +494,10 @@ header {
 }
 
 @media (max-width: 800px) {
+  .banner-subtitle {
+    line-height: 18px;
+    font-size: 1.1rem;
+  }
   .first-article {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -509,6 +517,35 @@ header {
         -ms-flex-order: 2;
             order: 2;
   }
+  .little-article {
+    -ms-grid-columns: 50% 1fr;
+        grid-template-columns: 50% 1fr;
+  }
+  .little-article figure img {
+    height: 200px;
+  }
+  .little-article p {
+    line-height: 18.5px;
+  }
+  .talk {
+    padding: 40px;
+  }
+  .talk .interested {
+    width: 100%;
+  }
+  .talk .interested p {
+    color: #c5b8b8;
+  }
+  .talk .interested h1 {
+    font-size: 2.3rem;
+  }
+  .f-contact {
+    padding: 40px;
+  }
+  .f-contact .contact-column ul li {
+    line-height: 25px;
+    margin-top: 25px;
+  }
 }
 
 @media (max-width: 675px) {
@@ -526,6 +563,111 @@ header {
   }
   .little-article figure img {
     height: 200px;
+  }
+  .little-article p {
+    line-height: 25px;
+  }
+  .f-contact .contact .contact-column ul li {
+    line-height: 25px;
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+  .f-contact .contact .contact-column .contact-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .banner {
+    height: 150px;
+  }
+  .banner .banner-subtitle {
+    display: none;
+  }
+  .banner .main-title-h1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .banner h1 {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .nav a {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .banner h1 {
+    font-size: 2.4rem;
+  }
+  header {
+    padding: 15px;
+  }
+  header .nav a {
+    font-size: 1.1rem;
+  }
+  header .logo {
+    width: 65px;
+    height: 65px;
+  }
+  .talk {
+    padding: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-top-right-radius: 100px;
+  }
+  .talk .interested {
+    width: 100%;
+  }
+  .talk .interested p {
+    color: #c5b8b8;
+    font-size: 0.9rem;
+  }
+  .talk .interested h1 {
+    font-size: 2rem;
+  }
+  .talk .button {
+    width: 100%;
+    font-weight: bolder;
+    font-size: 1rem;
+  }
+  .f-contact {
+    padding: 30px;
+  }
+  .f-contact .contact {
+    gap: 10px;
+  }
+  .f-contact .contact .contact-column ul li {
+    line-height: 25px;
+    margin-top: 15px;
+    font-size: 0.8rem;
+  }
+  .f-contact .contact .contact-column .contact-title {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .banner h1 {
+    font-size: 2rem;
+  }
+  header {
+    padding: 10px;
+    margin: 0;
+  }
+  header .nav a {
+    font-size: 1rem;
+  }
+  header .logo {
+    width: 50px;
+    height: 50px;
   }
 }
 /*# sourceMappingURL=main.css.map */
