@@ -2,11 +2,12 @@
 
 .search {
   display: flex;
+  box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
   background-color: $secondary-white;
   border-radius: 12px;
-  padding: 15px;
+  padding: 10px;
 
   .search-icon {
     width: 20px;

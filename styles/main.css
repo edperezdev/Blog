@@ -205,6 +205,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -213,7 +215,7 @@ header {
           justify-content: space-between;
   background-color: #dde3e6;
   border-radius: 12px;
-  padding: 15px;
+  padding: 10px;
 }
 
 .search .search-icon {
@@ -274,6 +276,7 @@ header {
   font: oblique 0.75rem Helvetica;
   color: rgba(185, 185, 218, 0.911);
   margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 .icons img {
@@ -651,6 +654,10 @@ header {
   .f-contact .contact .contact-column .contact-title {
     font-weight: bold;
     font-size: 1rem;
+  }
+  .f-contact .contact .contact-column .contact-title img {
+    width: 15px;
+    height: 15px;
   }
 }
 
