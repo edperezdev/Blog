@@ -27,7 +27,7 @@
   .first-article {
     grid-template-columns: 1fr;
     grid-auto-flow: dense;
-    border-bottom: 1px solid $secondary-grey;
+    
 
     figure {
       order: 1;
@@ -171,30 +171,30 @@
   }
   .talk {
     padding: 30px;
-    flex-direction:column;
+    flex-direction: column;
     border-top-right-radius: 100px;
 
     .interested {
       width: 100%;
       p {
         color: $third-white;
-        font-size:0.9rem;
+        font-size: 0.9rem;
       }
       h1 {
         font-size: 2rem;
       }
     }
 
-    .button{
-      width:100%;
+    .button {
+      width: 100%;
       font-weight: bolder;
-      font-size:1rem;
+      font-size: 1rem;
     }
   }
   .f-contact {
-    padding:30px;
+    padding: 30px;
     .contact {
-      gap:10px;
+      gap: 10px;
       .contact-column {
         ul li {
           line-height: 25px;

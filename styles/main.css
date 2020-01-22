@@ -505,7 +505,6 @@ header {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     grid-auto-flow: dense;
-    border-bottom: 1px solid rgba(129, 120, 120, 0.699);
   }
   .first-article figure {
     -webkit-box-ordinal-group: 2;
